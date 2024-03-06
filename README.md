@@ -30,4 +30,13 @@ Not completely finished; **about** page still missing.
 4. Open the output folder. Inside **main** folder there is now a **main.exe** file.
    If there are some File Not Found exceptions found when running, copy the project files in the folder with the **main.exe** file and run it again.
 
+### How to play
 
+The player moves with `W A S D` keys.
+
+To pause a game, press `space`.
+
+Rules:
+- collect all crystals and escape to win
+- do not let the monster catch you
+- you can hide in the bushes or the hiding place
