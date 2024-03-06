@@ -1,4 +1,4 @@
-import pygame
+#import pygame
 from game import *
 from menu import *
 from button import *
