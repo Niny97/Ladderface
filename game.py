@@ -74,6 +74,7 @@ class Game:
 
                 if e.reached:
                     self.hearts -= 1
+                    self.levels[self.lvl].player.speed = 0.0
                     self.levels[self.lvl].player.x, self.levels[self.lvl].player.y = \
                         self.levels[self.lvl].player.spawn[0], self.levels[self.lvl].player.spawn[1]
 
