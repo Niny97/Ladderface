@@ -2,22 +2,19 @@ import pygame
 
 
 class Button:
-    def __init__(self, screen, rect, x, y, name, image, where_to, second_rect=None):
-        self.surface = image.subsurface(rect)
+    def __init__(self, screen, image_rect, x, y, name, image, where_to, image_second_rect=None):
+        self.surface = image.subsurface(image_rect)
         self.name = name
         self.screen = screen
         self.image = image
         self.x = x
         self.y = y
-        self.rect = pygame.Rect(x, y, rect.width, rect.height)
+        self.rect = pygame.Rect(x, y, image_rect.width, image_rect.height)
         self.where_to = where_to
-        self.first = rect
+        self.first = image_rect
 
-        if second_rect:
-            self.second = second_rect
-            self.setting_button = True
-        else:
-            self.setting_button = False
+        if image_second_rect:
+            self.second = image_second_rect
 
     def render(self):
         self.screen.blit(self.surface, (self.x, self.y))

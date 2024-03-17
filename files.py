@@ -14,21 +14,25 @@ def convert_csv_to_map(filename):
 
         for row_idx, row in enumerate(map_reader):
             map_row = []
+
             for col_idx, number_str in enumerate(row):
                 try:
                     number = int(number_str)
+
                     if number == ground_number:
                         map_row.append('G')
                         walkable.append((col_idx, row_idx))
+
                     elif number == ladder_number:
                         map_row.append('L')
                         walkable.append((col_idx, row_idx))
+
                     else:
-                        # Handle other numbers if needed
-                        map_row.append('X')  # Placeholder for other numbers
+                        # Handle other numbers
+                        map_row.append('X')
+
                 except ValueError:
-                    # Handle non-integer values if needed
-                    map_row.append('X')  # Placeholder for non-integer values
+                    map_row.append('X')
 
             game_map.append(map_row)
 
@@ -41,10 +45,10 @@ def modify_csv(file_path, row_index, col_index, new_value):
         reader = csv.reader(csvfile)
         data = list(reader)
 
-    # Modify the desired value
+    # Modify value
     data[row_index][col_index] = new_value
 
-    # Write the updated data back to the CSV file
+    # Write data back to the file
     with open(file_path, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerows(data)
@@ -61,8 +65,10 @@ def render_map(screen, tileset, tile_rects, map_filename, target_size):
         tile_size = target_size
 
         for row_idx, row in enumerate(csvreader):
+
             for col_idx, tile_id in enumerate(row):
                 tile_id = int(str(tile_id.strip()))
+
                 if tile_id in tile_rects:
                     source_rect = pygame.Rect(tile_rects[tile_id])
                     target_rect = pygame.Rect(col_idx * tile_size, row_idx * tile_size, tile_size, tile_size)

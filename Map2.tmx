@@ -7,7 +7,6 @@
  <tileset firstgid="13" source="Top.tsx"/>
  <tileset firstgid="25" source="stuff.tsx"/>
  <tileset firstgid="41" source="Hideout.tsx"/>
- <tileset firstgid="57" source="back.tsx"/>
  <tileset firstgid="73" source="stuff2.tsx"/>
  <tileset firstgid="89" source="Tiles2.tsx"/>
  <layer id="1" name="Map" width="30" height="20">
