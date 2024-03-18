@@ -1,7 +1,6 @@
 # Ladderface
 
 Project was made with PyCharm.
-Not completely finished; **about** page still missing.
 
 ### How to create an .exe file
 
