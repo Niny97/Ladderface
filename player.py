@@ -10,7 +10,7 @@ class Player:
         self.spawn = [x, y]
         self.speed = 0.0
         self.acceleration = 0.01
-        self.deceleration = 0.01
+        self.deceleration = 0.02
         self.x2 = 0
         self.y2 = 0
 
